@@ -1,0 +1,29 @@
+    public static void main(String[] args) {
+        System.out.println(new App().getGreeting());
+        //EJERCICIO PASAR DE CENTIGRADOS A Fahrenheit Y a Kelvin
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Introduzca la temperatura e indique la conversión");
+        double temp = sc.nextDouble();
+        double tempG = temp;
+                System.out.println("Introduzca C (celsius) K (Kelvin) ó F (Fahrenheit) para indicar  la medida de su tempertura");
+        String cod = sc.next();
+        System.out.println("Introduzca C (celsius) K (Kelvin) ó F (Fahrenheit) para hacer la conversión  ");
+        String cod2 = sc.next();
+        
+        if((cod == "C" || cod == "c") && (cod2 == "C" || cod2 == "c")){
+            System.out.println("No hace falta hacer conversión");
+            System.out.println("Tienes " + temp + "Cº");
+            
+        }else if ((cod == "C" || cod == "c") && (cod2 == "K" || cod2 == "k")){
+            temp = temp + 273.15;
+            System.out.println(tempG+"Cº son " + temp + "Kº");
+            
+        }else if((cod == "C" || cod == "c") && (cod2 == "F" || cod2 == "f")){
+            
+             temp = (temp*9/5)+32;
+             System.out.println(tempG + "Cº son " + temp + "Fº");
+             
+        }else{
+            temp=0;
+        }
+}
