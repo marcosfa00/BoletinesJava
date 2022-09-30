@@ -16,8 +16,14 @@ public class App {
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduzca el dinero que tiene");
         double dinero = sc.nextDouble();
-        double d = dinero;
         double B_100 = Math.round(dinero /100);
+         System.out.println("Tienes " + B_100 + " Billetes de 100");
+        double B_20 = dinero - (B_100*100);
+         System.out.println("Tienes " + B_20 + " Billetes de 20");
+        double B_5 = dinero - (B_20*20);
+         System.out.println("Tienes " + B_5 + "Billetes de 5");
+        double billetes = B_100 + B_20 + B_5;
+        System.out.println();
        
         
     }
