@@ -16,22 +16,16 @@ public class App {
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduzca el dinero que tiene");
         double dinero = sc.nextDouble();
-        double d1 = 0;
-        double d2=0;
-        double d5=0;
-        double B_100 = Math.round(dinero /100);
-         d1 = B_100 * 100;
-         System.out.println("Tienes " + B_100 + " Billetes de 100");
-        double B_20 = Math.round((dinero - d1)/20);
-         System.out.println("Tienes " + B_20 + " Billetes de 20");
-         d2 = B_20*20;
-        double B_5 = Math.round((dinero - (d1)-(d2))/5);
-         System.out.println("Tienes " + B_5 + "Billetes de 5");
-         d5=B_5*5;
-        double billetes = B_100 + B_20 + B_5;
-        double M_1 = dinero - d1 - d2 - d5 ;
-        System.out.println("Tienes " + billetes + " billetes y " + M_1 + " Monedas");
-       
+        
+        double b_100 = dinero / 100;
+        double resto = b_100 % 100;
+        
+        double b_20 = dinero / 20;
+        double resto20 = b_20 % 20;
+        
+        double b_5 = dinero / 5;
+        double resto5 = b_5 % 5;
+        System.out.println(dinero +" € son " + b_100 + " billetes de 100" + resto20 + " billetes de 20" + resto5+" billetes de 5");
         
         //b100 = dinero /100   resto = b100 % 100   resto
         }
