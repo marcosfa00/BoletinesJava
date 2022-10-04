@@ -20,10 +20,10 @@ public class App {
         
         
         System.out.println("Introduzca el PVP");
-        double PVP= sc.nextDouble();
+        double pvp= sc.nextDouble();
         System.out.println("Introduzca el Precio Pagado");
-        double PP = sc.nextDouble();
-        double Dcnto = 100 -((PP*100)/PVP);
+        double pp = sc.nextDouble();
+        double Dcnto = 100 -((pp*100)/pvp);
         System.out.println("El descueto ha sido de: " + Math.round(Dcnto) + "%");
         
     }

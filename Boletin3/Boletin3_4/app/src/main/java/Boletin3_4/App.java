@@ -13,20 +13,22 @@ public class App {
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
         
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Introduzca el dinero que tiene");
-        double dinero = sc.nextDouble();
+         Scanner scan = new Scanner (System.in);
+      
+        System.out.println("Introduce la cantidad entera de euros:  ");
+        int dinero = scan.nextInt();//Pido al usuario el dinero que tiene
+        int b100, b20, b5 , m1; //Declaro las variables de todos los billetes
+        b100 = dinero/100;
+        System.out.println("La cantidad de billetes de 100 es: " + b100);
+        b20 = (dinero % 100)/20; 
+        System.out.println("La cantidad de billetes de 20 es: " + b20);
+        dinero -=b100*100;
+        dinero-=b20*20;//Restamos al dinero inicial la suma de los billetes de 100 y de 20
+        b5 = (dinero %100 % 20)/ 5;
+        System.out.println("La cantidad de billetes de 5 es: " + b5);
+        m1 = (dinero % 100 %20%5);
+        System.out.println("La cantidad de monedas de 1 es: " + m1);
         
-        double b_100 = dinero / 100;
-        double resto = b_100 % 100;
         
-        double b_20 = dinero / 20;
-        double resto20 = b_20 % 20;
-        
-        double b_5 = dinero / 5;
-        double resto5 = b_5 % 5;
-        System.out.println(dinero +" € son " + b_100 + " billetes de 100" + resto20 + " billetes de 20" + resto5+" billetes de 5");
-        
-        //b100 = dinero /100   resto = b100 % 100   resto
         }
 }
