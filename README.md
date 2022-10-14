@@ -57,3 +57,7 @@ y de contraseña debemos pegar el TOKEN
 
 !!LISTO PROCESO COMPLETADO¡¡
 
+más adelante, cuando hemos creado nuestro programa y tenemos una versión final tenemos que crear una etiqueta 
+
+esta se crea poniendo git tag -a v1.0 -m "comento que he creado la version 1.0"
+
