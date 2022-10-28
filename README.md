@@ -61,3 +61,7 @@ más adelante, cuando hemos creado nuestro programa y tenemos una versión final
 
 esta se crea poniendo git tag -a v1.0 -m "comento que he creado la version 1.0"
 
+para hacer el git push de la tag hay que poner
+
+git push origin --tags
+

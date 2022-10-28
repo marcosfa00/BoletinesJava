@@ -12,7 +12,7 @@ public class Consumo {
     private int kilometros;
     private int litros;
     private int velocidad_media;
-    private int precio_gas;
+    private double precio_gas;
     
     //Constructores
     public Consumo(int kilometros,int litros, int velocidad_media, int precio_gas){
@@ -36,19 +36,22 @@ public class Consumo {
     public void setvMedia(int velocidad){
         velocidad_media = velocidad;
     }
-    public void setpGas(int Precio){
+    public void setpGas(double Precio){
         precio_gas = Precio;
     }
-    public int getTime (){
+    public double getTime (int km){
         //tiempo en realizar el viaje
-        return 0;
+        return this.kilometros / this.velocidad_media ;
+        
         
     }
-    public int consumoMedio(){
-        return 0;
+    public double consumoMedio(){
+       int consumo = this.litros;
+        double media_consumo= (consumo *100)/this.kilometros;
+        return media_consumo;
     }
     
-    public int consumoEuros(){
-        return 0;
+    public double consumoEuros(double consumoMedio){
+        return consumoMedio * this.precio_gas;
     }
 }
