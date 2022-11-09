@@ -18,16 +18,30 @@ public class Metodos {
     }
     public void primeraPista(int adv_num){
 
-        if(num > adv_num){
-            JOptionPane.showMessageDialog(null,"EL NUMERO ES MAYOR");
-        }else if(num < adv_num) {
-            JOptionPane.showMessageDialog(null,"EL NUMERO ES MENOR");
-        }else {
-            JOptionPane.showMessageDialog(null,"ADIVINASTE");
-            this.adivinar = true;
+            int dif = Math.abs(num - adv_num) ;
+            if (dif >20) {
+                JOptionPane.showMessageDialog(null, "ESTÁS MUY LEJOS");
+            }
+            if (dif >= 10 &&  dif <=20 ){
+                JOptionPane.showMessageDialog(null, "ESTÁS LEJOS");
+            }
+            if (dif < 10 && dif > 5 ){
+                JOptionPane.showMessageDialog(null, "ESTÁS CERCA");
+            }
+            if (dif < 5 && dif >= 1){
+                JOptionPane.showMessageDialog(null, "ESTÁS MUY CERCA");
+            }
+
+            if (num == adv_num){
+                JOptionPane.showMessageDialog(null,"ADIVINASTE");
+                this.adivinar = true;
+            }
+
+
+
         }
 
-    }
+
 
     public void validarNum(int num){
         if (num < 1 || num > 50){

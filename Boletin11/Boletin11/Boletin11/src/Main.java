@@ -5,10 +5,10 @@ public class Main {
     public static void main(String[] args) {
         Metodos metodo = new Metodos();
         int j = Integer.parseInt(JOptionPane.showInputDialog("INTRODUCE NUMERO DE JUGADORES 1 O 2?"));
-        int random = (int) Math.random() * 51 +1;
+        double random =  Math.random() * 51 +1;
         int num;
         if (j == 1){
-            num = random;
+            num =(int) random;
             metodo.setNum(num);
         }else {
             num = Integer.parseInt(JOptionPane.showInputDialog("INTRODUCE EL NÚMERO QUE SE VA HA ADIVINAR"));
@@ -26,7 +26,7 @@ public class Main {
           if (metodo.getAdivinar()){
               i += intentos;
           }
-
+            i++;
 
         }while (i < intentos);
 
