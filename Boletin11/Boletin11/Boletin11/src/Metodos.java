@@ -16,7 +16,12 @@ public class Metodos {
     public int getIntentos(){
         return this.intentos;
     }
-    public void primeraPista(int adv_num){
+
+    public void setIntentos(int intentos) {
+        this.intentos = intentos;
+    }
+
+    public void primeraPista(int adv_num,int i){
 
             int dif = Math.abs(num - adv_num) ;
             if (dif >20) {
@@ -25,16 +30,19 @@ public class Metodos {
             if (dif >= 10 &&  dif <=20 ){
                 JOptionPane.showMessageDialog(null, "ESTÁS LEJOS");
             }
-            if (dif < 10 && dif > 5 ){
+            if (dif <=9 && dif >=5 ){
                 JOptionPane.showMessageDialog(null, "ESTÁS CERCA");
             }
-            if (dif < 5 && dif >= 1){
+            if (dif <=4 && dif >=2){
                 JOptionPane.showMessageDialog(null, "ESTÁS MUY CERCA");
             }
-
+            if (dif<2 && dif >=1){
+                JOptionPane.showMessageDialog(null, "AYYYYYY!!! QUE TE QUEMAS");
+            }
             if (num == adv_num){
-                JOptionPane.showMessageDialog(null,"ADIVINASTE");
                 this.adivinar = true;
+                JOptionPane.showMessageDialog(null,"ADIVINASTE" + " EN " + (getIntentos() - i) + " INTENTOS");
+
             }
 
 
