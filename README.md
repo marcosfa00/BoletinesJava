@@ -65,3 +65,10 @@ para hacer el git push de la tag hay que poner
 
 git push origin --tags
 
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->C;
+```
