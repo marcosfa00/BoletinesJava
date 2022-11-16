@@ -69,6 +69,7 @@ git push origin --tags
 ```mermaid
 graph TD;
     A-->B;
-    A-->C;
     B-->C;
+    A-->D;
+    D-->C;
 ```
