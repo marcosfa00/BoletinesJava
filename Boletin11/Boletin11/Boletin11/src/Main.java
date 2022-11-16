@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        
+        //Comento esto para ver si funciona
         Metodos metodo = new Metodos();
         int j = Integer.parseInt(JOptionPane.showInputDialog("INTRODUCE NÚMERO DE JUGADORES 1 O 2?"));
         double random =  Math.random() * 50 +1;
